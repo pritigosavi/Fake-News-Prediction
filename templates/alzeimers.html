@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzheimer Disease Prediction</title>
+    
+</head>
+
+<body>
+    <header>
+        <h1>Alzheimer's Disease Prediction</h1>
+    </header>
+
+    <form id="alzheimersCheckForm" action="/alzheimer's_disease_prediction_result" method="post" enctype="multipart/form-data">
+        <label for="image" class="custom-file-upload">
+            <!--<img src="/static/Images/select_image.png" alt="Select Image" style="height: 100px; margin-bottom: 10px;"> -->
+            <span>Please Select Your MRI Scan</span>
+            <input type="file" id="image" name="image" accept="image/*" onchange="displayFileName()" required>
+        </label>
+        <p id="fileName" class="file-name">No file selected</p>
+
+        <button type="submit">Predict Alzheimer's Disease</button>
+    </form>
+    <br><br><br><br>
+   
+
+    <script>
+        function displayFileName() {
+            const input = document.getElementById('image');
+            const fileNameDisplay = document.getElementById('fileName');
+
+            if (input.files.length > 0) {
+                fileNameDisplay.innerText = `File Selected: ${input.files[0].name}`;
+            } else {
+                fileNameDisplay.innerText = 'No file selected';
+            }
+        }
+    </script>
+
+</body>
+
+</html>

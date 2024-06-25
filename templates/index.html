@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Information</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="/static/style.css" rel="stylesheet">
+</head>
+<body >
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/templates/index.html">Disease Prediction</a>
+        </div>
+    </nav>
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/static/alzheimers.jpg" class="card-img-top" alt="Influenza">
+                    <div class="card-body">
+                        <h5 class="card-title">Alzeimer</h5>
+                        <p class="card-text">Alzheimer's is a progressive neurodegenerative disorder causing memory loss, cognitive decline, and behavioral changes. While there's no cure, early detection is vital for managing symptoms and providing support</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ url_for('read_alzeimer') }}" class="btn btn-outline-primary">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/static/diabetes.jpg" class="card-img-top" alt="Type 2 Diabetes">
+                    <div class="card-body">
+                        <h5 class="card-title">Diabetes</h5>
+                        <p class="card-text">Type 2 diabetes, marked by insulin resistance and elevated blood sugar, demands lifestyle changes. Regular monitoring, medication, and a focus on diet and exercise are essential for control and preventing complications</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ url_for('read_diabetes') }}" class="btn btn-outline-primary">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/static/Heart-Disease.jpeg" class="card-img-top" alt="Hypertension">
+                    <div class="card-body">
+                        <h5 class="card-title">Heart</h5>
+                        <p class="card-text">Heart disease, linked to high blood pressure, presents with symptoms like chest pain. Lifestyle adjustments, including a heart-healthy diet and exercise, along with regular check-ups, are crucial for prevention and early intervention.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ url_for('read_heart') }}" class="btn btn-outline-primary">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/static/corona.jpeg" class="card-img-top" alt="Asthma">
+                    <div class="card-body">
+                        <h5 class="card-title">Covid-19</h5>
+                        <p class="card-text">COVID-19, caused by the SARS-CoV-2 virus, spreads through respiratory droplets. Vaccination is key for prevention, and awareness of potential long-term effects is essential for post-recovery care.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ url_for('read_covid19') }}" class="btn btn-outline-primary">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/static/kidney.jpg" class="card-img-top" alt="Common Cold">
+                    <div class="card-body">
+                        <h5 class="card-title">Kidney</h5>
+                        <p class="card-text">Kidneys, crucial for filtering blood, face gradual decline in chronic kidney disease. Early detection through regular check-ups is vital, with advanced cases requiring interventions like dialysis or transplantation.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ url_for('read_kidney') }}" class="btn btn-outline-primary">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <img src="/static/liver.jpg" class="card-img-top" alt="Seasonal Allergies">
+                    <div class="card-body">
+                        <h5 class="card-title">Liver</h5>
+                        <p class="card-text">The liver, central to detoxification, can be affected by hepatitis, excessive alcohol use, and chronic conditions like cirrhosis. Lifestyle changes and regular medical check-ups are crucial for prevention and early management.</p>
+                        <div class="d-flex justify-content-center">
+                            <a href="{{ url_for('read_liver') }}" class="btn btn-outline-primary">Check</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

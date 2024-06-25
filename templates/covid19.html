@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>COVID-19 Symptom Checker</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="/templates/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/templates/index.html">Disease Prediction</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="mb-4">COVID-19 Symptom Checker</h2>
+        <form action="/covid_predicton_result" method="post" onsubmit="return predictResult()"> <!-- Replace '/predict-covid' with your form submission endpoint -->
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="breathingProblem" class="form-label">Breathing Problem (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Breathing_Problem" name="Breathing_Problem">
+                </div>
+                <div class="col">
+                    <label for="fever" class="form-label">Fever (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Fever" name="Fever">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="dryCough" class="form-label">Dry Cough (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="dryCough" name="dryCough">
+                </div>
+                <div class="col">
+                    <label for="soreThroat" class="form-label">Sore Throat (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Sore_Throat" name="Sore_Throat">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="hyperTension" class="form-label">Hyper Tension (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Hyper_Tension" name="Hyper_Tension">
+                </div>
+                <div class="col">
+                    <label for="fatigue" class="form-label">Fatigue (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Fatigue" name="Fatigue">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="abroadTravel" class="form-label">Abroad Travel (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Abroad_Travel" name="Abroad_Travel">
+                </div>
+                <div class="col">
+                    <label for="contactWithCovidPatient" class="form-label">Contact with COVID Patient (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Contact_with_COVID_Patient" name="Contact_with_COVID_Patient">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="attendedLargeGathering" class="form-label">Attended Large Gathering (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Attended_Large_Gathering" name="Attended_Large_Gathering">
+                </div>
+                <div class="col">
+                    <label for="visitedPublicExposedPlaces" class="form-label">Visited Public Exposed Places (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Visited_Public_Exposed_Places" name="Visited_Public_Exposed_Places">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="familyWorkingInPublicExposedPlaces" class="form-label">Family Working in Public Exposed Places (Yes=1, No=0):</label>
+                    <input type="number" class="form-control" id="Family_Working_in_Public_Exposed_Places" name="Family_Working_in_Public_Exposed_Places">
+                </div>
+                
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+
+        </form>
+    </div>
+    <script>
+        function predictResult() {
+            // Perform any necessary form validation or processing here
+            // For now, let's assume the form is valid and we want to redirect
+            window.location.href = "/templates/result.html"; // Replace '/templates/anotherPage.html' with the actual page URL
+            return false; // Prevent the default form submission
+        }
+    </script>
+</body>
+</html>

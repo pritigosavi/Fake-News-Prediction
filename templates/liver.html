@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Liver Disease Risk Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="/templates/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/templates/index.html">Disease Prediction</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="mb-4">Enter Details for Liver Disease Risk Prediction</h2>
+        <form action="/predict-liver" method="post" onsubmit="return predictResult()"> <!-- Replace '/predict-liver' with your form submission endpoint -->
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="age" class="form-label">Age:</label>
+                    <input type="number" class="form-control" id="age" name="age">
+                </div>
+                <div class="col">
+                    <label for="gender" class="form-label">Gender:</label>
+                    <select class="form-control" id="gender" name="gender">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="totalBilirubin" class="form-label">Total Bilirubin:</label>
+                    <input type="number" step="any" class="form-control" id="totalBilirubin" name="totalBilirubin">
+                </div>
+                <div class="col">
+                    <label for="directBilirubin" class="form-label">Direct Bilirubin:</label>
+                    <input type="number" step="any" class="form-control" id="directBilirubin" name="directBilirubin">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="alkalinePhosphotase" class="form-label">Alkaline Phosphotase:</label>
+                    <input type="number" class="form-control" id="alkalinePhosphotase" name="alkalinePhosphotase">
+                </div>
+                <div class="col">
+                    <label for="alamineAminotransferase" class="form-label">Alamine Aminotransferase:</label>
+                    <input type="number" class="form-control" id="alamineAminotransferase" name="alamineAminotransferase">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="aspartateAminotransferase" class="form-label">Aspartate Aminotransferase:</label>
+                    <input type="number" class="form-control" id="aspartateAminotransferase" name="aspartateAminotransferase">
+                </div>
+                <div class="col">
+                    <label for="totalProteins" class="form-label">Total Proteins:</label>
+                    <input type="number" step="any" class="form-control" id="totalProteins" name="totalProteins">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="albumin" class="form-label">Albumin:</label>
+                    <input type="number" step="any" class="form-control" id="albumin" name="albumin">
+                </div>
+                <div class="col">
+                    <label for="albuminGlobulinRatio" class="form-label">Albumin and Globulin Ratio:</label>
+                    <input type="number" step="any" class="form-control" id="albuminGlobulinRatio" name="albuminGlobulinRatio">
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+
+        </form>
+    </div>
+
+    <script>
+        function predictResult() {
+            // Perform any necessary form validation or processing here
+            // For now, let's assume the form is valid and we want to redirect
+            window.location.href = "/templates/result.html"; // Replace '/templates/anotherPage.html' with the actual page URL
+            return false; // Prevent the default form submission
+        }
+    </script>
+</body>
+</html>

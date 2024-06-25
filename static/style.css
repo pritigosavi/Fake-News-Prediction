@@ -1,0 +1,55 @@
+img{
+    height: 180px;
+    width: 50px;
+}
+.card{
+    border: 1px solid lightgray;
+   border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+
+form{
+    border: 1px solid lightgray;
+   border-radius: 5px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  padding:30px;
+  margin-bottom:50px;
+}
+h2{
+    display:flex;
+    justify-content:center;
+}
+
+body{
+    padding-top: 70px;
+    background-color: #cadefc;
+}
+.navbar-brand {
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.card {
+    transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.btn-primary {
+    transition: transform 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    transform: scale(1.1);
+}
+input.form-control {
+    border: none;
+    border-bottom: 2px solid #3498db;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+input.form-control:focus {
+    border-color: #2ecc71; /* Border color on focus */
+}

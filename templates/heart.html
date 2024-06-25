@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Heart Disease Risk Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="/templates/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="/templates/index.html">Disease Prediction</a>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="mb-4">Enter Your Details for Heart Disease Risk Prediction</h2>
+        <form action="/heart_failure_predicton_result" method="post">
+            <!-- Replace '/predict-heart' with your form submission endpoint -->
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="age" class="form-label">Age:</label>
+                    <input type="number" class="form-control" id="Age" name="Age">
+                </div>
+                <div class="col">
+                    <label for="gender" class="form-label">Gender (Male=1, Female=0):</label>
+                    <input type="number" class="form-control" id="gender" name="gender">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="chestPainType" class="form-label">Chest Pain Type:</label>
+                    <input type="number" class="form-control" id="chestPainType" name="chestPainType">
+                </div>
+                <div class="col">
+                    <label for="restingBP" class="form-label">Resting Blood Pressure:</label>
+                    <input type="number" class="form-control" id="RestingBP" name="RestingBP">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="serumCholestoral" class="form-label">Serum Cholestoral:</label>
+                    <input type="number" class="form-control" id="Cholesterol" name="Cholesterol">
+                </div>
+                <div class="col">
+                    <label for="fastingBloodSugar" class="form-label">Fasting Blood Sugar:</label>
+                    <input type="number" class="form-control" id="FastingBS" name="FastingBS">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="restingECG" class="form-label">Resting ECG:</label>
+                    <input type="number" class="form-control" id="RestingECG" name="RestingECG">
+                </div>
+                <div class="col">
+                    <label for="maxHeartRate" class="form-label">Max Heart Rate:</label>
+                    <input type="number" class="form-control" id="MaxHR" name="MaxHR">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="exerciseInducedAngina" class="form-label">Exercise Induced Angina:</label>
+                    <input type="number" class="form-control" id="ExerciseAngina" name="ExerciseAngina">
+                </div>
+                <div class="col">
+                    <label for="stDepression" class="form-label">ST Depression:</label>
+                    <input type="number" class="form-control" id="stDepression" name="stDepression">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="stSegmentSlope" class="form-label">ST Segment Slope:</label>
+                    <input type="number" class="form-control" id="stSegmentSlope" name="stSegmentSlope">
+                </div>
+                <div class="col">
+                    <label for="majorVesselsColored" class="form-label">Major Vessels Colored:</label>
+                    <input type="number" class="form-control" id="majorVesselsColored" name="majorVesselsColored">
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="thalassemia" class="form-label">Thalassemia:</label>
+                    <input type="number" class="form-control" id="thalassemia" name="thalassemia">
+                </div>
+                <div class="col">
+                    <!-- Add the remaining fields in a similar fashion -->
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+
+        </form>
+    </div>
+    <!-- <script>
+        function predictResult() {
+            // Perform any necessary form validation or processing here
+            // For now, let's assume the form is valid and we want to redirect
+            window.location.href = "{{ url_for('result') }}"; // Replace '/templates/anotherPage.html' with the actual page URL
+            return false; // Prevent the default form submission
+        }
+    </script> -->
+</body>
+
+</html>
